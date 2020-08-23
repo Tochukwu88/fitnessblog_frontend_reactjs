@@ -14,12 +14,12 @@ const Layout=({children})=>{
 
     return(
         <>
-        <div >
-         <Header  show={sideDrawer} click={handleChange}  close={closeDrawer}  />
-          {children }
-          {/* <Footer /> */}
-
-        </div>
+        
+         <Header  className='lheader' show={sideDrawer} click={handleChange}  close={closeDrawer}  />
+         
+        <div className='llcontainer'> {children  }</div>
+       
+       
     
         </>
     )

@@ -12,6 +12,7 @@ const Index=()=>{
     },[])
     const loadBlogs = () =>{
         list().then(data=>{
+            console.log(data)
             if(data.error){
                 console.log(data.error)
             }else{
@@ -23,11 +24,12 @@ const Index=()=>{
     const showALLBlogs =() =>{
         return blogs.map((blog,i)=>{
           return  <div className='home-blogs' key={i}>
-                  
-               <a href={`/blogs/${blog.slug}`}><h2>{blog.title}</h2></a>
+                  <div className='home-blog-content'>
+                    <a href={`/blogs/${blog.slug}`}><h2>{blog.title}</h2></a>
                     <p>written by <a href={`/profile/${blog.postedBy.username}`}>{blog.postedBy.username}</a>| Published {moment(blog.updatedAt).fromNow()}</p>
-                  <div className='blog-excerpt'> {parse(`${blog.excerpt}`)}</div> 
-                  <hr/>
+                    <div className='blog-excerpt'> {parse(`${blog.excerpt}`)}</div> 
+                    </div>
+                 
                   
                 
    
@@ -38,16 +40,19 @@ const Index=()=>{
         <Layout>
          <div className='lm home-page'>
          <section className="intro">
-         <h4 className='hp4'>this site is a 'work in progress'</h4>
-         <h3>Fitness and Health</h3>
-          <h1> learn and share experinces about finess and health</h1>
+         
+         <div> <h1> learn and share experinces about finess and health</h1>
           <a href='/blogs'> <button className="btn">learn from others</button></a>
          
           <a href='/user/crud/blog'><button className="btn">share your experince</button></a>
+          </div>
           
          </section>
-         <hr/>
+
+       <h4>latest article</h4>
+       <hr></hr>
          <section className="home-post">
+
          {showALLBlogs()}
           
           <a href='/blogs' className='seeMore'>see more</a>

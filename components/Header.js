@@ -44,7 +44,7 @@ const Header = (props)=> {
                 <li className='nav-item'><Link href='/user/crud/blog' ><a className='nav-link'>write a blog</a></Link></li>
                 
                 
-                {!isAuth() &&(
+                {isAuth() && isAuth().role ===1 &&(
                     <>
                     <li className='nav-item'><Link  href="/signup" ><a className='nav-link'>sign up</a></Link></li>
                 
@@ -78,7 +78,7 @@ const Header = (props)=> {
                
                
                 
-                {!isAuth() &&(
+                {!isAuth()  &&(
                     <>
                     <li className='desktop-nav-item'><Link  href="/signup" ><a className='desktop-nav-link'>sign up</a></Link></li>
                 
