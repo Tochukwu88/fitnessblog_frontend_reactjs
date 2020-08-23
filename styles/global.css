@@ -18,20 +18,20 @@ body {
   height: 100%;
   background: #fff;
 }
-.lflex_wrapper {
+/* .lflex_wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between
-}
+} */
 /* * {
   box-sizing: border-box;
 } */
-/* #__next{
-  height: 100%;
+#__next{
+  /* height: 100%; */
+ width: 100%;
  
- 
-} */
+}
 /* .layout{
   min-height: 600px;
   /* display: grid;
@@ -64,6 +64,7 @@ right:0;
 
 #head-section{
   margin-bottom: 80px;
+  width: 100%;
   
 }
 #general-header{
@@ -212,15 +213,16 @@ h3{
 .intro{
   background: #293241;
   height: 600px;
+  
   margin-bottom: 10rem ;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+ display: flex;
+ align-items: center;
+justify-content: center;
   
 }
 .intro div{
-  margin: auto;
+ text-align: center;
+ width: 100%;
 }
 
 .intro h1{
@@ -252,8 +254,9 @@ h3{
 .home-post{
   
   margin: 2rem auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));;
   grid-gap: 20px;
   
 }
@@ -486,6 +489,9 @@ form.search-form::after {
   line-height: 2rem;
 
 }
+.single-blog-content h1{
+  line-height: 3.5rem;
+}
 .singleblog-category-tag{
   position: relative;
   
@@ -704,6 +710,11 @@ form.search-form::after {
   }
   .dashboard{
     text-align: center;
+  }
+  .intro{
+    height: 800px;
+    width: 100vw;
+   
   }
   
   

@@ -55,9 +55,10 @@ const Index=()=>{
 
          {showALLBlogs()}
           
-          <a href='/blogs' className='seeMore'>see more</a>
+          
 
          </section>
+         <a href='/blogs' className='seeMore'>see more</a>
         
 
          </div>
